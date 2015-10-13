@@ -358,7 +358,7 @@ h1.chain {
     letter-spacing: 2px;
     font-size: 18px;
     font-weight: 600;
-    background: url(../img/cog-icon.png) no-repeat top center;
+    background: url(../svg/pin.svg) no-repeat top center;
     padding-top: 75px;
 }
 
@@ -417,7 +417,7 @@ h2.logo-header {
     letter-spacing: 1px;
     font-size: 24px;
     font-weight: 300;
-    background: url(../img/main-logo.png) no-repeat top center;
+    background: url(../svg/logo.svg) no-repeat top center;
     padding-top: 120px;
     margin: 70px 0 40px 0;
     font-style: italic;
@@ -476,12 +476,12 @@ p.text-intro {
 }
 
 .hero {
-    background: url(/static/img/main-bg.jpg) no-repeat top center #f4f5fc;
+    background: url(../img/main-bg.jpg) no-repeat center center #fdfdfd;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 685px;
+    height: 700px;
 }
 
 nav {
@@ -491,7 +491,7 @@ nav {
 }
 
 .logo-holder {
-    background: url(../img/main-logo.png) no-repeat center center;
+    background: url(../svg/logo.svg) no-repeat center center;
     width: 94px;
     height: 85px;
     position: absolute;
@@ -504,7 +504,7 @@ nav {
 }
 
 header {
-    background-color: #f4f5fc;
+    background-color: #fdfdfd;
 }
 
 header ul {
@@ -530,7 +530,7 @@ header ul li a {
 
 .intro {
     padding: 115px 0;
-    background-color: #fbfbfb;
+    background-color: #fcfcfc;
 }
 
 .section-1 {
