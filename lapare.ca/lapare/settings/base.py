@@ -55,7 +55,7 @@ WSGI_APPLICATION = 'lapare.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'lapare.db',
+        'NAME': '../www_lapare_ca.db',
         'USER': '',
         'PASSWORD': '',
         'HOST': '',

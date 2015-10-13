@@ -69,4 +69,6 @@ node_modules/
 # bower packages
 lapare.ca/assets-src/vendor/
 .sass-cache/
-lapare.ca/lapare.db
+www_lapare_ca.db
+
+.idea/workspace.xml
