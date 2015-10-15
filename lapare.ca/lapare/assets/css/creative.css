@@ -46,7 +46,7 @@ p {
 }
 
 .bg-primary {
-    background-color: #B23627;
+    background-color: #FDFDFD;
 }
 
 .bg-dark {
@@ -457,4 +457,22 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #1A1919;
+}
+
+
+.propos {
+    background-image: url(../img/chantal.jpg);
+    background-position: left;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.blured {
+    text-shadow: 1px 2px 5px rgb(40, 44, 45);
+}
+
+.lapare-yellow {
+    color: #EFA92C;
 }
