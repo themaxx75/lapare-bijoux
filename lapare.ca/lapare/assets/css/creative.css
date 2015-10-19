@@ -15,7 +15,7 @@ hr {
 }
 
 hr.light {
-    border-color: #FDFDFD;
+    border-color: #FAFAFA;
 }
 
 a {
@@ -46,11 +46,11 @@ p {
 }
 
 .bg-primary {
-    background-color: #FDFDFD;
+    background-color: #FAFAFA;
 }
 
 .bg-dark {
-    color: #FDFDFD;
+    color: #FAFAFA;
     background-color: #1A1919;
 }
 
@@ -246,7 +246,7 @@ header .header-content .header-content-inner p {
     display: block;
     position: relative;
     margin: 0 auto;
-    max-width: 650px;
+    max-width: 100%;
 }
 
 .portfolio-box .portfolio-box-caption {
@@ -256,9 +256,9 @@ header .header-content .header-content-inner p {
     width: 100%;
     height: 100%;
     text-align: center;
-    color: #FDFDFD;
+    color: #FAFAFA;
     opacity: 0;
-    background: rgba(240, 95, 64, .9);
+    background: rgba(253, 253, 253, 0.11);
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -316,9 +316,9 @@ header .header-content .header-content-inner p {
 }
 
 .btn-default {
-    border-color: #FDFDFD;
+    border-color: #FAFAFA;
     color: #1A1919;
-    background-color: #FDFDFD;
+    background-color: #FAFAFA;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -359,18 +359,18 @@ fieldset[disabled] .btn-default:active,
 .btn-default.disabled.active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
-    border-color: #FDFDFD;
-    background-color: #FDFDFD;
+    border-color: #FAFAFA;
+    background-color: #FAFAFA;
 }
 
 .btn-default .badge {
-    color: #FDFDFD;
+    color: #FAFAFA;
     background-color: #1A1919;
 }
 
 .btn-primary {
     border-color: #B23627;
-    color: #FDFDFD;
+    color: #FAFAFA;
     background-color: #B23627;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
@@ -384,7 +384,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
     border-color: #ed431f;
-    color: #FDFDFD;
+    color: #FAFAFA;
     background-color: #ee4b28;
 }
 
@@ -418,7 +418,7 @@ fieldset[disabled] .btn-primary.active {
 
 .btn-primary .badge {
     color: #B23627;
-    background-color: #FDFDFD;
+    background-color: #FAFAFA;
 }
 
 .btn {
@@ -435,23 +435,23 @@ fieldset[disabled] .btn-primary.active {
 
 ::-moz-selection {
     text-shadow: none;
-    color: #FDFDFD;
+    color: #FAFAFA;
     background: #1A1919;
 }
 
 ::selection {
     text-shadow: none;
-    color: #FDFDFD;
+    color: #FAFAFA;
     background: #1A1919;
 }
 
 img::selection {
-    color: #FDFDFD;
+    color: #FAFAFA;
     background: 0 0;
 }
 
 img::-moz-selection {
-    color: #FDFDFD;
+    color: #FAFAFA;
     background: 0 0;
 }
 
@@ -470,9 +470,28 @@ body {
 }
 
 .blured {
-    text-shadow: 1px 2px 5px rgb(40, 44, 45);
+    text-shadow: 0px 0px 7px rgb(40, 44, 45);
 }
 
 .lapare-yellow {
     color: #EFA92C;
 }
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+    color: #080808;
+
+}
+
+
+
+/*.carousel .item {*/
+  /*height: 300px;*/
+/*}*/
+
+/*.item img {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*min-height: 300px;*/
+/*}*/

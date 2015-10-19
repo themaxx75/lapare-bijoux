@@ -70,5 +70,5 @@ node_modules/
 lapare.ca/assets-src/vendor/
 .sass-cache/
 www_lapare_ca.db
-
+lapare.ca/lapare/assets/uploads/*
 .idea/workspace.xml
