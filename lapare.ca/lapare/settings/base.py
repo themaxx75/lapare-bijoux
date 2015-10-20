@@ -14,7 +14,7 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
-
+SHELL_PLUS = 'ipython'
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'CHANGE THIS!!!'
 
