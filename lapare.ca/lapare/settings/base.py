@@ -9,6 +9,11 @@ root = lambda *x: join(abspath(PROJECT_ROOT), *x)
 
 sys.path.insert(0, root('apps'))
 
+ADMINS = (
+    ('Maxime Lapointe', 'maxx@themaxx.ca'),
+)
+
+MANAGERS = ADMINS
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'CHANGE THIS!!!'
