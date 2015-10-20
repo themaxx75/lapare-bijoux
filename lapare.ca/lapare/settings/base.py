@@ -27,7 +27,8 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles'
+    'django.contrib.staticfiles',
+    'django_extensions',
 )
 
 PROJECT_APPS = ()
@@ -55,7 +56,7 @@ WSGI_APPLICATION = 'lapare.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'lapare.db',
+        'NAME': '../www_lapare_ca.db',
         'USER': '',
         'PASSWORD': '',
         'HOST': '',
@@ -100,7 +101,7 @@ TEMPLATE_DIRS = (
 try:
     from .local import *
 except ImportError:
-    pass
+    from .production import *
 
 
 # importing test settings file if necessary
