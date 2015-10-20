@@ -101,7 +101,7 @@ TEMPLATE_DIRS = (
 try:
     from .local import *
 except ImportError:
-    pass
+    from .production import *
 
 
 # importing test settings file if necessary
