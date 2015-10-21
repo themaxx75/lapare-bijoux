@@ -16,14 +16,14 @@
         <link rel="apple-touch-icon" sizes="180x180" href="{% static 'icons/touch-icon-iphone-6-plus.png' %}">
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
     <!-- Custom Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!-- Plugin CSS -->
-    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" type="text/css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/creative.css' %}" type="text/css">
@@ -60,11 +60,11 @@
                     <li>
                         <a class="page-scroll" href="#propos">À propos</a>
                     </li>
+{#                    <li>#}
+{#                        <a class="page-scroll" href="#gallerie">Gallerie</a>#}
+{#                    </li>#}
                     <li>
                         <a class="page-scroll" href="#bijoux">Bijoux</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#gallerie">Gallerie</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -91,79 +91,30 @@
                     <p class="text-faded blured lapare-yellow">
 Bachelière en arts plastiques, diplômée en infographie et comptant plusieurs ateliers de perfectionnement en gravure et en joaillerie, Chantal Laparé fonde en 2007 LAPARÉ BIJOUX. Depuis lors, ses activités artistiques ne cessent de croître. En plus de présenter ses œuvres dans plusieurs points de vente dont Montréal, Trois-Rivières, Québec et en Colombie-Britannique, elle participe annuellement à de nombreuses expositions dans les diverses régions du Québec. L’originalité et les qualités esthétiques de son travail lui ont valu quelques prix et mentions. Chantal est membre artisan professionnel du Conseil des métiers d'art du Québec, membre du regroupement des Métiers d’art de la Mauricie depuis 2008 et de 2010 à 2012 a été membre de son conseil d’adminis-tration en tant que trésorière. Elle est aussi membre de l’Association des artistes de la Rive-Sud, l’AARS depuis 2013.
                     </p>
-                    <a href="#" class="btn btn-default btn-xl">Get Started!</a>
+                    <a href="#bijoux" class="btn btn-default btn-xl">Bijoux</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="bijoux">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">At Your Service</h2>
-                    <hr class="primary">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
-                        <h3>Sturdy Templates</h3>
-                        <p class="text-muted">Our templates are updated regularly so they don't break.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                        <h3>Ready to Ship</h3>
-                        <p class="text-muted">You can use this theme as is, or you can make changes!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                        <h3>Up to Date</h3>
-                        <p class="text-muted">We update dependencies to keep things fresh.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
-                        <h3>Made with Love</h3>
-                        <p class="text-muted">You have to make your websites with love these days!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="no-padding" id="gallerie">
+    <section class="no-padding" id="bijoux">
         <div class="container-fluid">
             <div class="row no-gutter">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                   <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                  </ol>
+{#                  <ol class="carousel-indicators">#}
+{#                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>#}
+{#                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>#}
+{#                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>#}
+{#                  </ol>#}
 
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner" role="listbox">
                       {% for img in carousel %}
-                        <div class="item{% if forloop.first %} active{% endif %}">
-                            <img src="{% static 'uploads/' %}{{ img }}" alt="..." class="img-responsive">
+                        <div class="text-center item{% if forloop.first %} active{% endif %}" style="background-color: #FAFAFA">
+                            <img src="{% static 'img/carousel/' %}{{ img }}" alt="..." class="center-block">
                         <div class="carousel-caption"></div>
                         </div>
-
-{#                    <div class="item">#}
-{#                      <img src="{% static 'img/portfolio/CHANTAL_LAPARE_2014-0062.jpg' %}" alt="..." class="img-responsive">#}
-{#                      <div class="carousel-caption">#}
-{#                      </div>#}
-{#                    </div>#}
                   {% endfor %}
                   </div>
 
@@ -177,21 +128,54 @@ Bachelière en arts plastiques, diplômée en infographie et comptant plusieurs 
                     <span class="sr-only">Next</span>
                   </a>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
         </div>
     </section>
+
+
+{#    <section id="bijoux">#}
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                <div class="col-lg-12 text-center">#}
+{#                    <h2 class="section-heading">At Your Service</h2>#}
+{#                    <hr class="primary">#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                <div class="col-lg-3 col-md-6 text-center">#}
+{#                    <div class="service-box">#}
+{#                        <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>#}
+{#                        <h3>Sturdy Templates</h3>#}
+{#                        <p class="text-muted">Our templates are updated regularly so they don't break.</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-lg-3 col-md-6 text-center">#}
+{#                    <div class="service-box">#}
+{#                        <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>#}
+{#                        <h3>Ready to Ship</h3>#}
+{#                        <p class="text-muted">You can use this theme as is, or you can make changes!</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-lg-3 col-md-6 text-center">#}
+{#                    <div class="service-box">#}
+{#                        <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>#}
+{#                        <h3>Up to Date</h3>#}
+{#                        <p class="text-muted">We update dependencies to keep things fresh.</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-lg-3 col-md-6 text-center">#}
+{#                    <div class="service-box">#}
+{#                        <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>#}
+{#                        <h3>Made with Love</h3>#}
+{#                        <p class="text-muted">You have to make your websites with love these days!</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+
 
     <aside class="bg-dark">
         <div class="container text-center">
@@ -223,15 +207,17 @@ Bachelière en arts plastiques, diplômée en infographie et comptant plusieurs 
     </section>
 
     <!-- jQuery -->
-    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
-    <script src="{% static 'js/jquery.fittext.js' %}"></script>
-    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="{% static 'js/creative.js' %}"></script>

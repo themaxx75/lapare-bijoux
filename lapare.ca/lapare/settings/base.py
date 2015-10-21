@@ -34,6 +34,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+    'www',
 )
 
 PROJECT_APPS = ()
@@ -96,6 +97,12 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = (
     root('assets'),
 )
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
+STATICFILES_STORAGE = ('django.contrib.staticfiles.storage.'
+                       'ManifestStaticFilesStorage')
 
 TEMPLATE_DIRS = (
     root('templates'),
