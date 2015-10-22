@@ -159,13 +159,14 @@
     <section class="no-padding bg-dark" id="expo">
         <div class="container text-center">
             <div class="call-to-action">
-                <h2>Free Download at Start Bootstrap!</h2>
-{#                <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>#}
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>sdfsdf
+                <h3>Quebec</h3>
+                {% for vente in ventes_quebec %}
+                    {{ vente.nom }}
+                    <br>
+                    {{ vente.address }}
+                    <br>
+                    {{ vente.url }}
+                {% endfor %}
             </div>
         </div>
     </section>

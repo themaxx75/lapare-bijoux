@@ -7,6 +7,9 @@ class Expo(models.Model):
     adresse = models.TextField()
     description = models.TextField()
 
+    def __str__(self):
+        return self.description
+
 
 class Vente(models.Model):
     nom = models.TextField()
@@ -28,6 +31,9 @@ class Vente(models.Model):
     province = models.IntegerField(choices=PROVINCES)
     adresse = models.TextField()
     url = models.URLField(default=None, blank=True)
+
+    def __str__(self):
+        return self.nom
 
 
 class Bijoux(models.Model):
