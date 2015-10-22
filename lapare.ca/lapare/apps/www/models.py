@@ -3,7 +3,7 @@ import os
 
 from django.core.management import call_command
 from django.db import models
-from lapare.settings import MEDIA_ROOT, STATIC_URL, STATICFILES_DIRS
+from lapare.settings import STATIC_URL, STATICFILES_DIRS
 from PIL import Image
 
 
@@ -42,7 +42,25 @@ class Vente(models.Model):
         return self.nom
 
 
+# To process bulk delete in Admin
+class BijouxQuerySet(models.QuerySet):
+    def delete(self, *args, **kwargs):
+        for obj in self:
+            try:
+                os.remove(obj.image.path)
+            except FileNotFoundError:
+                pass
+
+            try:
+                os.remove(obj.processed_path)
+            except FileNotFoundError:
+                pass
+
+        super(BijouxQuerySet, self).delete(*args, **kwargs)
+
+
 class Bijoux(models.Model):
+    objects = BijouxQuerySet.as_manager()
     image = models.ImageField()
     processed = models.TextField(default=None, blank=True)
     processed_path = models.TextField(default=None, blank=True)
@@ -80,7 +98,6 @@ class Bijoux(models.Model):
             name=self.processed
         )
         img.save(self.processed_path, 'JPEG', quality=90)
-
         call_command('collectstatic', verbosity=0, interactive=False)
 
         super(Bijoux, self).save(force_insert, force_update)
@@ -88,14 +105,10 @@ class Bijoux(models.Model):
     def delete(self, *args, **kwargs):
         try:
             # Removing uploaded file
-            os.remove(
-                '{path}/{img}'.format(
-                    path=MEDIA_ROOT,
-                    img=str(self.image).split('.', 1)[1]
-                )
-            )
+            os.remove(self.image.path)
         except FileNotFoundError:
             pass
+
         try:
             # Removing processed file
             os.remove(self.processed_path)
