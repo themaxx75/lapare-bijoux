@@ -67,11 +67,10 @@ class Bijoux(models.Model):
 
     def image_tag(self):
         if self.processed:
-            return '<img src="{url}" width="50%" height="50%" />'.format(
-                url=STATIC_URL + 'img/carousel/' + self.processed
-            )
-        else:
-            return ''
+            return (
+                '<img src="{url}" class="img-thumbnail img-responsive"/>'
+            ).format(url=STATIC_URL + 'img/carousel/' + self.processed)
+
     image_tag.short_description = 'Image'
     image_tag.allow_tags = True
 
@@ -117,5 +116,11 @@ class Bijoux(models.Model):
 
         super(Bijoux, self).delete(*args, **kwargs)
 
+    class Meta:
+        verbose_name_plural = "bijoux"
+
     def __str__(self):
-        return str(self.image)
+        try:
+            return str(self.image).split('./', 1)[1]
+        except IndexError:
+            return str(self.image)

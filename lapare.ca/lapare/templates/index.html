@@ -159,6 +159,7 @@
     <section class="no-padding bg-dark" id="expo">
         <div class="container text-center">
             <div class="call-to-action">
+            {% if ventes_quebec %}
                 <h3>Quebec</h3>
                 {% for vente in ventes_quebec %}
                     {{ vente.nom }}
@@ -166,6 +167,23 @@
                     {{ vente.address }}
                     <br>
                     {{ vente.url }}
+                {% endfor %}
+            {% endif %}
+
+            {% if ventes_autres %}
+                {% for vente in ventes_autres %}
+                    <h3>{{ vente.get_province_display }}</h3>
+                 {{ vente.nom }}
+                    <br>
+                    {{ vente.address }}
+                    <br>
+                    {{ vente.url }}
+                {% endfor %}
+            {% endif %}
+            </div>
+            <div class="call-to-action">
+                {% for ex in expo %}
+                    {{ ex.description }}<br>
                 {% endfor %}
             </div>
         </div>
