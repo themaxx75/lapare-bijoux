@@ -14,4 +14,5 @@ class VenteAdmin(admin.ModelAdmin):
 
 @admin.register(Bijoux)
 class BijouxAdmin(admin.ModelAdmin):
-    pass
+    exclude = ('processed', 'processed_path')
+    readonly_fields = ('image_tag',)
