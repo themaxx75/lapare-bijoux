@@ -6,3 +6,4 @@ django
 django-extensions
 ipython
 Pillow
+django-admin-bootstrapped

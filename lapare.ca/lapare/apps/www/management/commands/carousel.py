@@ -6,6 +6,7 @@ import glob
 from lapare.settings import MEDIA_ROOT, STATICFILES_DIRS
 import hashlib
 from django.core.management import call_command
+import os
 
 
 class Command(BaseCommand):
@@ -17,6 +18,9 @@ class Command(BaseCommand):
 
 def resize_gallery(max_height=800):
     files = [x for x in glob.glob(MEDIA_ROOT + '/*.jpg')]
+    old_files = [x for x in STATICFILES_DIRS[0] + '/img/carousel/*']
+    for f in old_files:
+        os.remove(f)
 
     for file in files:
         with open(file, 'rb') as f:
