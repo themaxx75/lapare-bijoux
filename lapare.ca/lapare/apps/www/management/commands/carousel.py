@@ -17,10 +17,13 @@ class Command(BaseCommand):
 
 
 def resize_gallery(max_height=800):
-    files = [x for x in glob.glob(MEDIA_ROOT + '/*.jpg')]
-    old_files = [x for x in STATICFILES_DIRS[0] + '/img/carousel/*']
+    files = [x for x in glob.glob(MEDIA_ROOT + '/*') if
+             any([x.split('.')[-1] in ['jpeg', 'jpg', 'png']])]
+    old_files = [x for x in glob.glob(STATICFILES_DIRS[0] + '/img/carousel/*')]
+    
     for f in old_files:
         os.remove(f)
+        print('Deleting:', f)
 
     for file in files:
         with open(file, 'rb') as f:
