@@ -1,8 +1,9 @@
-from django.db import models
-from lapare.settings import MEDIA_ROOT, STATICFILES_DIRS, STATIC_URL
-import os
-from django.core.management import call_command
 import hashlib
+import os
+
+from django.core.management import call_command
+from django.db import models
+from lapare.settings import MEDIA_ROOT, STATIC_URL, STATICFILES_DIRS
 from PIL import Image
 
 
@@ -94,23 +95,14 @@ class Bijoux(models.Model):
                 )
             )
         except FileNotFoundError:
-            print(
-                    '{path}/{img}'.format(
-                        path=MEDIA_ROOT,
-                        img=str(self.image).split('.', 1)[1]
-                    )
-            )
             pass
         try:
             # Removing processed file
             os.remove(self.processed_path)
         except FileNotFoundError:
-            print(self.processed_path)
             pass
 
         super(Bijoux, self).delete(*args, **kwargs)
 
     def __str__(self):
         return str(self.image)
-
-

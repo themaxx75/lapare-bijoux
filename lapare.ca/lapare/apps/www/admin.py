@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Expo, Vente, Bijoux
+
+from .models import Bijoux, Expo, Vente
 
 
 @admin.register(Expo)
@@ -16,3 +17,8 @@ class VenteAdmin(admin.ModelAdmin):
 class BijouxAdmin(admin.ModelAdmin):
     exclude = ('processed', 'processed_path')
     readonly_fields = ('image_tag',)
+
+    def get_readonly_fields(self, request, obj=None):
+        if obj:
+            return self.readonly_fields + ('image',)
+        return self.readonly_fields
