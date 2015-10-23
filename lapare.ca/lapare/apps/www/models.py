@@ -12,6 +12,8 @@ class Expo(models.Model):
     end = models.DateField()
     adresse = models.TextField()
     description = models.TextField()
+    url = models.URLField(default=None, blank=True, null=True,
+                               max_length=1024)
 
     def __str__(self):
         return self.description
@@ -36,7 +38,7 @@ class Vente(models.Model):
     )
     province = models.IntegerField(choices=PROVINCES)
     adresse = models.TextField()
-    url = models.URLField(default=None, blank=True)
+    url = models.URLField(default=None, blank=True, max_length=1024)
 
     def __str__(self):
         return self.nom
