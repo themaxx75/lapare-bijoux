@@ -9,7 +9,12 @@ root = lambda *x: join(abspath(PROJECT_ROOT), *x)
 
 sys.path.insert(0, root('apps'))
 
+ADMINS = (
+    ('Maxime Lapointe', 'maxx@themaxx.ca'),
+)
 
+MANAGERS = ADMINS
+SHELL_PLUS = 'ipython'
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'CHANGE THIS!!!'
 
@@ -22,6 +27,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'django_admin_bootstrapped',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -29,6 +35,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+    'www',
 )
 
 PROJECT_APPS = ()
@@ -91,6 +98,12 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = (
     root('assets'),
 )
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
+STATICFILES_STORAGE = ('django.contrib.staticfiles.storage.'
+                       'ManifestStaticFilesStorage')
 
 TEMPLATE_DIRS = (
     root('templates'),

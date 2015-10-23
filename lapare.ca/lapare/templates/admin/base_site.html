@@ -1,0 +1,15 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+    {{ title }} · {% trans 'Mamba' %}
+{% endblock %}
+
+{% block branding %}
+    <a href="/">
+        <img src="{% static "svg/logo.svg" %}" height="45px" alt="mamba" style="padding-top: 5px"/>
+    </a>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
