@@ -74,11 +74,11 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fr-CA'
 
 TIME_ZONE = 'America/Montreal'
 
-USE_I18N = False
+USE_I18N = True
 
 USE_L10N = True
 

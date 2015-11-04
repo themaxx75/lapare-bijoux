@@ -91,22 +91,11 @@
                     <p class="text-faded blured lapare-yellow">
                         Bachelière en arts plastiques, diplômée en infographie et comptant plusieurs ateliers de perfectionnement en gravure et en joaillerie, Chantal Laparé fonde en 2007 LAPARÉ BIJOUX. Depuis lors, ses activités artistiques ne cessent de croître. En plus de présenter ses œuvres dans plusieurs points de vente dont Montréal, Trois-Rivières, Québec et en Colombie-Britannique, elle participe annuellement à de nombreuses expositions dans les diverses régions du Québec. L’originalité et les qualités esthétiques de son travail lui ont valu quelques prix et mentions. Chantal est membre artisan professionnel du Conseil des métiers d'art du Québec, membre du regroupement des Métiers d’art de la Mauricie depuis 2008 et de 2010 à 2012 a été membre de son conseil d’adminis-tration en tant que trésorière. Elle est aussi membre de l’Association des artistes de la Rive-Sud, l’AARS depuis 2013.
                     </p>
-{#                    <a href="#bijoux" class="btn btn-default btn-xl">Bijoux</a>#}
                 </div>
             </div>
         </div>
        <div class="container">
             <div class="row">
-{#                <div class="col-md-6 col-md-offset-3 text-center">#}
-{#                    <div class="service-box">#}
-{#                        <a href="http://fr.chatelaine.com/blogues/blogue-de-la-redac/beaux-bijoux/">#}
-{#                            <img class="wow bounceIn" data-wow-delay=".2s" src="{% static 'img/chatelaine.png' %}" width="50%" height="50%">#}
-{#                            <p class="text-faded blured lapare-yellow">#}
-{#                                Billet sur Laparé bijoux sur le blogue de la rédaction de la revue Châtetelaine#}
-{#                            </p>#}
-{#                        </a>#}
-{#                    </div>#}
-{#                </div>#}
                 <div class="col-md-6 col-md-offset-3 text-center">
                     <div class="service-box">
                         <a href="http://www.emametiersdart.ca/">
@@ -126,12 +115,6 @@
             <div class="row no-gutter">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                   <!-- Indicators -->
-{#                  <ol class="carousel-indicators">#}
-{#                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>#}
-{#                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>#}
-{#                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>#}
-{#                  </ol>#}
-
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner" role="listbox">
                       {% for img in carousel %}
@@ -213,7 +196,7 @@
                         {% endif %}
                         <strong>{{ ex.description }}</strong>
                         <br>
-                        Du {{ ex.start }} au {{ ex.end }}
+                        Du <strong>{{ ex.start }}</strong> au <strong>{{ ex.end }}</strong>
                         {% if ex.url %}
                             <br>
                             <br>
@@ -226,16 +209,6 @@
             </div>
         </div>
     </section>
-
-{#    <aside class="bg-dark">#}
-{#        <div class="container text-center">#}
-{#            <div class="call-to-action">#}
-{#                <h2>Free Download at Start Bootstrap!</h2>#}
-{#                <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>#}
-{#            </div>#}
-{#        </div>#}
-{#    </aside>#}
-
     <section id="contact">
         <div class="container">
             <div class="row">
@@ -247,14 +220,6 @@
                     <br>
                     <br>
                 </div>
-{#                <div class="col-lg-4 col-lg-offset-2 text-center">#}
-{#                    <i class="fa fa-phone fa-3x wow bounceIn" data-wow-delay=".7s"></i>#}
-{#                    <p>123-456-6789</p>#}
-{#                </div>#}
-{#                <div class="col-lg-4 text-center">#}
-{#                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".7s"></i>#}
-{#                    <p><a href="mailto:your-email@your-domain.com">email@domain.com</a></p>#}
-{#                </div>#}
             </div>
             <br>
             <br>
@@ -262,7 +227,6 @@
                 <div class="col-md-4 text-center">
                     <i class="fa fa-phone fa-3x wow bounceIn" data-wow-delay=".7s"></i>
                     <p>(418) 903-6569</p>
-                    <p>&nbsp;</p>
                 </div>
                 <div class="col-md-4 text-center">
                     <a href="https://fr-fr.facebook.com/Lapar%C3%A9-bijoux-678006458939376/" style="color: #3b5998">
